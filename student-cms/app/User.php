@@ -15,10 +15,7 @@ class User extends Authenticatable
      *
      * @var array
      */
-    protected $fillable = [
-        'name', 'email', 'password',
-    ];
-
+    protected $fillable = ['name', 'email', 'is_admin', 'password', 'sex', 'phone', 'pro_class'];
     /**
      * The attributes that should be hidden for arrays.
      *
@@ -36,4 +33,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    protected static function rules()
+{
+    return [
+        'id' => 'required|digits:10',   
+        'password' => 'required'        
+        ];
+}
 }
