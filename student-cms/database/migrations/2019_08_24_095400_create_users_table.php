@@ -16,7 +16,7 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('password');
             $table->string('phone')->default('');
-            $table->string('sex')->default('');
+            $table->string('gender')->default('');
             $table->string('email')->default('');
             $table->string('pro_class')->default('');
             $table->boolean('is_admin')->default(0);

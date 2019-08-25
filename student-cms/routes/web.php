@@ -17,6 +17,6 @@ Route::get('login', ['middleware' => 'guest', 'as' => 'login', 'uses' => 'LoginC
 Route::post('login', ['middleware' => 'guest', 'uses' => 'LoginController@loginPost']);
 Route::get('logout', ['middleware' => 'auth', 'as' => 'logout', 'uses' => 'LoginController@logout']);
 
-Route::get('stu/home', ['as' => 'stu_home', 'uses' => 'Stu\StudentController@home']);
-Route::get('stu/edit', ['as' => 'stu_edit', 'uses' => 'Stu\StudentController@edit']);
-Route::post('stu/update', ['as' => 'stu_update', 'uses' => 'Stu\StudentController@update']);
+Route::get('student/home', ['as' => 'student_home', 'uses' => 'StudentController@home']);
+Route::get('student/edit', ['as' => 'student_edit', 'uses' => 'StudentController@edit']);
+Route::post('student/update', ['as' => 'student_update', 'uses' => 'StudentController@update']);

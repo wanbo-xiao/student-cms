@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title> @yield('title') </title>
-    <link rel="stylesheet" href="./css/app.css">
+    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
     <nav class="navbar navbar-default">
         <div class="container">
+            @include('flash')
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle Navigation</span>
@@ -47,6 +49,6 @@
 
     @yield('content')
 
-<script src="./js/app.js"></script>
+<script src="/js/app.js"></script>
 </body>
 </html>

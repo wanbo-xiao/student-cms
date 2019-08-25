@@ -17,10 +17,7 @@ class CreateGradesTable extends Migration
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->integer('math')->nullable();
             $table->integer('english')->nullable();
-            $table->integer('c')->nullable();
             $table->integer('sport')->nullable();
-            $table->integer('think')->nullable();
-            $table->integer('soft')->nullable();
             $table->timestamps();
         });
     }
